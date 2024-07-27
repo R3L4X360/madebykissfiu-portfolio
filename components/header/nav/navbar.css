@@ -1,0 +1,26 @@
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  @apply transition ease-in;
+}
+
+nav ul {
+  @apply list-none text-center p-2;
+}
+
+nav.shift ul li a {
+  @apply relative z-10 block;
+}
+
+nav.shift ul li a:hover {
+  @apply text-slate-100;
+}
+
+nav.shift ul li a:after {
+  @apply block absolute top-0 left-0 bottom-0 right-0 m-auto w-full h-[1px] text-transparent opacity-0 -z-10 bg-secondary invisible overflow-hidden rounded;
+  content: ".";
+}
+
+nav.shift ul li a:hover:after {
+  @apply opacity-100 visible h-full;
+}
