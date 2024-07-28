@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import Header from "@/components/header/header";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "MADEBYKISSFIU",
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className="bg-background text-text">
         <Header />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
